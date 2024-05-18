@@ -146,6 +146,8 @@ footer {
     background-color: #0891b2;
     color: white;
     display: flex;
+    width: 100%;
+    
 }
 
 footer p,
@@ -176,7 +178,8 @@ footer .email {
 }
 
 .right img {
-    width: 750px;
+    width: 80%;
+    width: 500px;
     padding: 75px 100px;
 }
 
@@ -191,3 +194,131 @@ footer .email {
     align-items: center;
     justify-content: flex-start;
 }
+
+@media (max-width: 1250px) {
+    
+    
+    #card-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 50px;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .card {
+        max-width: 550px;
+        height: 500px;
+    }
+
+    .content {
+       
+        height: 700px;
+        min-width: 600px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        overflow: hidden;
+    }
+
+    header img {
+        height: 500px;
+    }
+    
+    .image-container {
+        grid-area: 1 / 1 / 3 / 3;
+        z-index: 0;
+    }
+
+    .overlay-text {
+        top: 60px;
+        background-color: rgba(0, 0, 0, 0);
+        font-size: 2.8rem;
+    }
+
+    #info {
+        grid-area: 1 / 2 / 5 / 4;
+        z-index: 1;
+    }
+
+    #info h1 {
+        font-size: 2.7rem;
+    }
+
+    #info p {
+        font-size: 1.5rem;
+    }
+
+    #icons {
+        font-size: 1.5rem;
+    }
+
+    .right {
+        width: 400px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+    }
+
+    .right img {
+        padding: 100px;
+    }
+}
+
+@media (max-width: 767px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .overlay-text {
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        background-color: rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 70px;
+        text-align: center;
+        width: calc(100% - 20px);
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        height: 1100px;
+        min-width: 200px;
+        margin: 0;
+    }
+
+    #info {
+        
+    }
+
+    #card-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        gap: 50px;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .card {
+        max-width: 550px;
+        height: 500px;
+    }
+
+    .right {
+        width: 100%;
+        
+    }
+
+    .right img {
+        width: 100%;
+        padding: 0;
+    }
+  }
